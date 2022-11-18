@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Wijnflessen</h1>
+    <div class="grid" *ngFor="let Winebottle of bottles">
+        <div class="bottle-list">
+            <h3><a [title]="Winebottle.naam + ' details'" [routerLink]="['/bottle', Winebottle.id]">
+                    <img src="{{ Winebottle.img }}" alt="Wijnfles" width="500" height="500">
+                </a></h3>
+        </div>
+        <div class="bottle-list">
+            <h3><a [title]="Winebottle.naam + ' details'" [routerLink]="['/bottle', Winebottle.id]">
+                    {{ Winebottle.naam }}
+                </a></h3>
+        </div>
+    </div>
+</div>

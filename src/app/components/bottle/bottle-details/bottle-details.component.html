@@ -1,0 +1,18 @@
+<h1 [title]="selectedBottle?.naam"></h1>
+<div class="container" *ngIf="selectedBottle">
+    <div class="bottle-list">
+        <h3><a [title]="selectedBottle.naam">
+            {{ selectedBottle.naam }}
+          </a></h3>
+    </div>
+    <div class="bottle-list">
+        <h3><a [title]="selectedBottle.prijs">
+            {{ selectedBottle.prijs }}
+          </a></h3>
+    </div>
+    <div class="bottle-list">
+        <h3><a [title]="selectedBottle.land">
+            {{ selectedBottle.land }}
+          </a></h3>
+    </div>
+</div>
