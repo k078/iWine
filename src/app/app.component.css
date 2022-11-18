@@ -1,0 +1,26 @@
+.alles {
+    font-family: Arial, Helvetica, sans-serif;
+    margin:10px;
+    padding: 10px;
+    border: 1px solid red;
+  }
+.navbar{
+    margin:10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.footer{
+    margin:10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.text{
+    margin:10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.container{
+    margin:10px;
+    padding: 10px;
+    border: 1px solid black;
+}
