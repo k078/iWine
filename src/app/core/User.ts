@@ -1,3 +1,4 @@
+import { CellarService } from "../components/cellar/cellar.service";
 import { Cellar } from "./Cellar";
 
 export class User{
@@ -17,24 +18,4 @@ export class User{
         this.totalWorth = 0;
         this.friendList = [];
     }
-    addCellar(cellar:Cellar){
-        this.cellarList.push(cellar);
-        this.totalWorth += cellar.worth;
-    }
-    removeCellar(cellar:Cellar){
-        this.cellarList.splice(this.cellarList.indexOf(cellar),1);
-        this.totalWorth -= cellar.worth;
-    }
-    getTotalWorth(){
-        return this.totalWorth;
-    }
-    addFriend(user:User){
-        this.friendList.push(user);
-    }
-    removeFriend(user:User){
-        this.friendList.splice(this.friendList.indexOf(user),1);
-    }
 }
-export const users = [
-    new User(1, "admin", "admin", "admin@admin.nl"),
-];

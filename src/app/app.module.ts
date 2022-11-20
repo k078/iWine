@@ -11,6 +11,9 @@ import { CellarDetailsComponent } from './components/cellar/cellar-details/cella
 import { CellarListComponent } from './components/cellar/cellar-list/cellar-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutComponent } from './components/about/about.component';
+import { UserListComponent } from './components/user/user-list/user-list.component';
+import { UserDetailsComponent } from './components/user/user-details/user-details.component';
+import { UserEditComponent } from './components/user/user-edit/user-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +24,9 @@ import { AboutComponent } from './components/about/about.component';
     CellarDetailsComponent,
     CellarListComponent,
     AboutComponent,
+    UserListComponent,
+    UserDetailsComponent,
+    UserEditComponent,
   ],
   imports: [
     BrowserModule,

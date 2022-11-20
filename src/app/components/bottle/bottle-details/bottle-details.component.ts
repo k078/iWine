@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Winebottle, winebottles } from 'src/app/core/Winebottle';
+import { Winebottle } from 'src/app/core/Winebottle';
+import { BottleService } from '../bottle.service';
 
 @Component({
   selector: 'app-bottle-details',
@@ -8,7 +9,8 @@ import { Winebottle, winebottles } from 'src/app/core/Winebottle';
   styleUrls: ['./bottle-details.component.css']
 })
 export class BottleDetailsComponent implements OnInit {
-  bottle = winebottles;
+  BottleService: BottleService = new BottleService();
+  bottle = this.BottleService.getBottles();
   selectedBottle: Winebottle | undefined;
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap; 
@@ -20,7 +22,4 @@ export class BottleDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {
    }
-
-  
-
 }
