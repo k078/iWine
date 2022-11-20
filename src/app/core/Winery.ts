@@ -2,18 +2,20 @@ import { User } from "./User";
 import { Winebottle } from "./Winebottle";
 
 export class Winery{
-    naam:string;
-    adres:string;
-    land:string;
-    datumOprichting:Date;
-    oprichter:string|User;
+    id:number;
+    name:string;
+    address:string;
+    country:string;
+    establishment:Date;
+    founder:string|User;
     wineBottleList:Winebottle[];
-    constructor(naam:string,adres:string,land:string ,datumOprichting:Date,oprichter:string){
-        this.naam = naam;
-        this.adres = adres;
-        this.land = land;
-        this.datumOprichting = datumOprichting;
-        this.oprichter = oprichter;
+    constructor(id:number,name:string,address:string,country:string ,establishment:Date,founder:string){
+        this.id=id;
+        this.name = name;
+        this.address = address;
+        this.country = country;
+        this.establishment = establishment;
+        this.founder = founder;
         this.wineBottleList = [];
     }
     addWineBottle(wineBottle:Winebottle){
@@ -24,6 +26,6 @@ export class Winery{
     }
 }
 export const Wineries = [
-    new Winery("Cantine Settesoli", "Strada Statale 115, 92013 Menfi (AG)", "Italië", new Date(1958, 1, 1), "Giuseppe Bursi"),
-    new Winery("La Palma", "Peumo, Cachapoal Valley", "Chili", new Date(1824, 1, 1), "Francisco Ignacio,"),
+    new Winery(1, "Cantine Settesoli", "Strada Statale 115, 92013 Menfi (AG)", "Italië", new Date(1958, 1, 1), "Giuseppe Bursi"),
+    new Winery(2, "La Palma", "Peumo, Cachapoal Valley", "Chili", new Date(1824, 1, 1), "Francisco Ignacio,"),
 ]

@@ -10,6 +10,7 @@ import { BottleDetailsComponent } from './components/bottle/bottle-details/bottl
 import { CellarDetailsComponent } from './components/cellar/cellar-details/cellar-details.component';
 import { CellarListComponent } from './components/cellar/cellar-list/cellar-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutComponent } from './components/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BottleDetailsComponent,
     CellarDetailsComponent,
     CellarListComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

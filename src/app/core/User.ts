@@ -2,29 +2,37 @@ import { Cellar } from "./Cellar";
 
 export class User{
     cellarList:Cellar[];
+    friendList:User[];
     id:number;
     username:string;
     password:string;
     email:string;
-    totaalWaarde:number;
+    totalWorth:number;
     constructor(id:number,username:string,password:string,email:string){
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
         this.cellarList = [];
-        this.totaalWaarde = 0;
+        this.totalWorth = 0;
+        this.friendList = [];
     }
     addCellar(cellar:Cellar){
         this.cellarList.push(cellar);
-        this.totaalWaarde += cellar.waarde;
+        this.totalWorth += cellar.worth;
     }
     removeCellar(cellar:Cellar){
         this.cellarList.splice(this.cellarList.indexOf(cellar),1);
-        this.totaalWaarde -= cellar.waarde;
+        this.totalWorth -= cellar.worth;
     }
-    getTotaalWaarde(){
-        return this.totaalWaarde;
+    getTotalWorth(){
+        return this.totalWorth;
+    }
+    addFriend(user:User){
+        this.friendList.push(user);
+    }
+    removeFriend(user:User){
+        this.friendList.splice(this.friendList.indexOf(user),1);
     }
 }
 export const users = [

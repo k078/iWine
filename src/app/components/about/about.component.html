@@ -1,0 +1,140 @@
+<div class="row">
+    <div class="col-sm-6 col-md-8 col-lg-9">
+        <h3 id="aboutTitle">Over deze applicatie</h3>
+        <p>
+            Deze applicatie is gemaakt in het kader van het vak 'Clientside web
+            frameworks' van Avans Hogeschool Breda.
+        </p>
+        <h1>Voetbal-app</h1>
+        <p>
+            Met deze app kun je je favoriete voetbalclubs of spelers volgen. 
+            In de lijst met clubs en spelers kan je zoeken naar jouw favoriete club/speler. 
+            Deze kan je dan toevoegen aan je favorieten, via het menu kan je je favorieten bekijken die jij toegevoegt hebt.
+            Als gebruiker is het ook mogelijk om je vrienden toe te voegen.
+
+        </p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">          
+            <div class="card-body">
+                <h5 class="card-title">Kalle van de Visser</h5>
+                <p class="card-text">Studentnummer: 2177927</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>Entiteiten</h3>
+<p>
+    Hier geef je een toelichting op je entiteiten. Voeg ook een afbeelding van
+    je model toe zoals dat bij NoSql gevraagd wordt.
+</p>
+
+<img src="assets/images/erd.png" class="px-5 py-5" alt="..." />
+
+<div class="grid">
+    <div class="col-sm-12 col-md-4">
+        <p>Gebruiker</p>
+        <ul>
+            <li>id: number</li>
+            <li>gebruikersname: string</li>
+            <li>wachtwoord: string</li>
+            <li>email: string</li>
+            <li>totaalwaarde: number</li>
+            <li>cellarList:Cellar[]</li>
+            <li>vriendenlijst:User[]</li>
+        </ul>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <p>Kelder</p>
+        <ul>
+            <li>id: number</li>
+            <li>adres: string</li>
+            <li>eigenaar: string | User</li>
+            <li>oppervlakte: number</li>
+            <li>wijnflessenLijst: Winebottle[]</li>
+            <li>totaalwaarde:number</li>
+        </ul>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <p>Wijnfles</p>
+        <ul>
+            <li>id: number</li>
+            <li>wijnsoort: WineType</li>
+            <li>naam: string</li>
+            <li>jaar: number</li>
+            <li>land:string</li>
+            <li>prijs:number</li>
+            <li>zelfGemaakt:boolean</li>
+            <li>wijngaard:Winery</li>
+            <li>kelderLijst:Cellar[]</li>
+            <li>img:string</li>
+        </ul>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <p>Wijngaard</p>
+        <ul>
+            <li>id: number</li>
+            <li>naam: string</li>
+            <li>adres: string</li>
+            <li>land: string</li>
+            <li>opgericht:Date</li>
+            <li>oprichter:string|User</li>
+            <li>wijnflessenLijst: Winebottle[]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h3>Userstories</h3>
+        <p>
+            Hier verwoord je in de vorm van userstories de functionaliteit van
+            jouw applicatie.
+        </p>
+
+        <table class="table table-bordered">
+            <thead>
+                <th>Nr</th>
+                <th class="col-6">Userstory</th>
+                <th>Evt toelichting</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        Als gebruiker wil ik een overzicht van movies kunnen
+                        raadplegen, zodat ik kan zien welke movies op dit moment
+                        beschikbaar zijn.
+                    </td>
+                    <td>Overzicht is een grid.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        Als ingelogde gebruiker wil ik zelf een movie kunnen
+                        toevoegen, zodat ik mijn movies in het systeem kan
+                        invoeren.
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        Als ingelogde gebruiker wil ik mijn eigen movies kunnen
+                        bewerken en verwijderen, zodat ik mijn informatie
+                        up-to-date kan houden.
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        <p>Voeg zelf meer userstories toe.</p>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

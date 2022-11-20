@@ -1,18 +1,18 @@
-<h1 [title]="selectedBottle?.naam"></h1>
+<h1 [title]="selectedBottle?.name"></h1>
 <div class="container" *ngIf="selectedBottle">
     <div class="bottle-list">
-        <h3><a [title]="selectedBottle.naam">
-            {{ selectedBottle.naam }}
+        <h3><a [title]="selectedBottle.name">
+            {{ selectedBottle.name }}
           </a></h3>
     </div>
     <div class="bottle-list">
-        <h3><a [title]="selectedBottle.prijs">
-            {{ selectedBottle.prijs }}
+        <h3><a [title]="selectedBottle.price">
+            {{ selectedBottle.price }}
           </a></h3>
     </div>
     <div class="bottle-list">
-        <h3><a [title]="selectedBottle.land">
-            {{ selectedBottle.land }}
+        <h3><a [title]="selectedBottle.country">
+            {{ selectedBottle.country }}
           </a></h3>
     </div>
 </div>

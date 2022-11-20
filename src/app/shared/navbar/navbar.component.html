@@ -1,5 +1,21 @@
-<p>
-    <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a> | 
-    <a routerLink="/bottle" routerLinkActive="active" ariaCurrentWhenActive="page">Flessen</a> | 
-    <a routerLink="/cellar" routerLinkActive="active" ariaCurrentWhenActive="page">Kelder</a>
-</p>
+<div class="container">
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">iWine</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" ariaCurrentWhenActive="page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/bottle" ariaCurrentWhenActive="page">Flessen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/cellar" ariaCurrentWhenActive="page">Kelder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about" ariaCurrentWhenActive="page">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

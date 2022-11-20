@@ -1,10 +1,40 @@
 .grid {
     display: grid;
-    width: 100%;
     grid-template-columns: repeat(2, 1fr);
-    padding: 10px;
+    width: 100%;
     text-align: left;
     align-content: left;
-    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    grid-gap: 10px;
+    background-color: #ffefef;
   }
+.card{
+  width: auto;
+  border: solid 1px black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+.grid2{
+  display:grid;
+  background-color: red;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  align-content: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.elemtext{
+  padding:0px;
+  margin: 0px; 
+}
+p{
+  font-size:18px;
+  font-weight: bold; 
+  text-align: left;
+}
+a{
+  text-decoration: none;
+}
