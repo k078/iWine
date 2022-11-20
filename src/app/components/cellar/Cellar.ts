@@ -1,6 +1,6 @@
-import { User } from "./User";
-import { Winebottle } from "./Winebottle";
-import { BottleService } from "../components/bottle/bottle.service";
+import { User } from "../user/User";
+import { Winebottle } from "../bottle/Winebottle";
+import { BottleService } from "../bottle/bottle.service";
 
 export class Cellar{
     id:number;

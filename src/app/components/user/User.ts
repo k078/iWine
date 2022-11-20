@@ -1,5 +1,5 @@
-import { CellarService } from "../components/cellar/cellar.service";
-import { Cellar } from "./Cellar";
+import { CellarService } from "../cellar/cellar.service";
+import { Cellar } from "../cellar/Cellar";
 
 export class User{
     cellarList:Cellar[];

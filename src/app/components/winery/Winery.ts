@@ -1,5 +1,5 @@
-import { User } from "./User";
-import { Winebottle } from "./Winebottle";
+import { User } from "../user/User";
+import { Winebottle } from "../bottle/Winebottle";
 
 export class Winery{
     id:number;

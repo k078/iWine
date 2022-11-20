@@ -1,1 +1,23 @@
-<p>user-list works!</p>
+<div class="container">
+  <h1>Gebruikers</h1>
+  <div class="grid" >
+      <div class="card" *ngFor="let user of users">
+          <h3>
+              <a [title]="user.username + ' details'" [routerLink]="['/users', user.id]">
+                <span class="material-icons">
+                  person
+                  </span>
+              </a>
+          </h3>
+          <div class="elemtext">
+              <h2>Id: {{ user.id }}</h2>
+              <p>Gebruikersnaam: {{ user.username}}</p>
+              <a [title]="user.id + ' details'" [routerLink]="['/users', user.id]"><button class="btn" type="button">Details</button></a>
+              <a><button class="btn" type="delete" >Verwijder</button></a>
+          </div>
+      </div>
+    </div>
+    <div class="button">
+      <button class="btn" type="button">Voeg nieuwe gebruiker toe</button>
+    </div>
+</div>

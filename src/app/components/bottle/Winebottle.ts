@@ -1,5 +1,5 @@
-import { Cellar } from "./Cellar";
-import { Winery } from "./Winery";
+import { Cellar } from "../cellar/Cellar";
+import { Winery } from "../winery/Winery";
 
 export class Winebottle {
     id: number;
@@ -26,8 +26,8 @@ export class Winebottle {
     }
 }
 export enum WineType {
-    SauvignonBlanc,
-    Chardonnay,
-    Verdejo,
-    PinotGrigio
+    SauvignonBlanc = "Sauvignon Blanc",
+    Chardonnay = "Chardonnay",
+    Verdejo = "Verdejo",
+    PinotGrigio = "Pinot Grigio",
 }

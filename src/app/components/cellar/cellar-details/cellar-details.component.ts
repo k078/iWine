@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Cellar } from 'src/app/core/Cellar';
-import { Winebottle } from 'src/app/core/Winebottle';
+import { Cellar } from 'src/app/components/cellar/Cellar';
+import { Winebottle } from 'src/app/components/bottle/Winebottle';
 import { CellarService } from '../cellar.service';
 
 @Component({

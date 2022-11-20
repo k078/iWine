@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Winebottle } from 'src/app/core/Winebottle';
+import { Winebottle } from 'src/app/components/bottle/Winebottle';
 import { BottleService } from '../bottle.service';
 
 @Component({

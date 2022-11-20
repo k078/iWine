@@ -1,1 +1,19 @@
-<p>user-details works!</p>
+<h1 [title]="selectedUser?.username"></h1>
+<div class="container" *ngIf="selectedUser">
+    <div class="User-list">
+        <h3><a [title]="selectedUser.username">
+            {{ selectedUser.username }}
+          </a></h3>
+    </div>
+    <div class="User-list">
+        <h3><a [title]="selectedUser.email">
+            Email: {{ selectedUser.email }}
+          </a></h3>
+    </div>
+    <div class="User-list">
+        <h3><a [title]="selectedUser.totalWorth">
+            Waarde: {{ selectedUser.totalWorth }}
+          </a></h3>
+    </div>
+</div>
+

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { UserService } from "../user/user.service";
-import { Winebottle } from "src/app/core/Winebottle";
-import { Cellar } from "../../core/Cellar";
+import { Winebottle } from "src/app/components/bottle/Winebottle";
+import { Cellar } from "./Cellar";
 
 @Injectable({
     providedIn: "root",
