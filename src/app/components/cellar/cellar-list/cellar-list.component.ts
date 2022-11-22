@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cellar } from '../Cellar';
 import { CellarService } from '../cellar.service';
 
 
@@ -8,11 +9,17 @@ import { CellarService } from '../cellar.service';
   styleUrls: ['./cellar-list.component.css']
 })
 export class CellarListComponent implements OnInit {
-  CellarService: CellarService = new CellarService();
-  cellars = this.CellarService.getCellars();
-  constructor() { }
+  cellars : Cellar[] = [];
+  constructor(private cellarService : CellarService) { }
 
   ngOnInit(): void {
+    this.cellars = this.cellarService.getCellars();
+  }
+  removeCellar(cellar:Cellar) {
+    this.cellarService.removeCellar(cellar);
+  }
+  updateCellar(cellar:Cellar) {
+    this.cellarService.updateCellar(cellar);
   }
 
 }

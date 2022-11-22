@@ -1,19 +1,25 @@
 <div class="container">
-    <h1>Kelders</h1>
-    <div class="grid">
-        <div class="card" *ngFor="let Cellar of cellars">
-                <h3>
-                    <a [title]="Cellar.id + ' details'" [routerLink]="['/cellar', Cellar.id]">
-                        <img src="assets/article.png" alt="Kelder" width="100" height="100">
-                    </a>
-                </h3>
-            <div class="elemtext">
-                <h2>Kelder {{ Cellar.id }}</h2>
-                <p>Eigenaar: {{Cellar.owner.username}}</p>
-                <a [title]="Cellar.id + ' details'" [routerLink]="['/cellar', Cellar.id]"><span class="material-icons">
-                    info
-                    </span></a>
-            </div>
-        </div>
+  <h1>Kelders</h1>
+  <div class="grid">
+    <div class="card" *ngFor="let Cellar of cellars">
+      <h3>
+        <a [title]="Cellar.id + ' details'" [routerLink]="['/cellar', Cellar.id]">
+          <img src="assets/article.png" alt="Kelder" width="100" height="100">
+        </a>
+      </h3>
+      <div class="elemtext">
+        <h2>Kelder {{ Cellar.id }}</h2>
+        <p>Eigenaar: {{Cellar.owner.username}}</p>
+        <a [title]="Cellar.id + ' details'" [routerLink]="['/cellar', Cellar.id]"><span class="material-icons">
+            info
+          </span></a>
+        <a (click)="removeCellar( Cellar )" title="deleteCellar"><span class="material-icons">
+            delete
+          </span></a>
+        <a [title]="Cellar.id + ' edit'" [routerLink]="['/cellar/update', Cellar.id]"><span class="material-icons">
+            edit
+          </span></a>
+      </div>
     </div>
+  </div>
 </div>

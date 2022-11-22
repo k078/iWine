@@ -9,17 +9,17 @@ import { BottleService } from '../bottle.service';
   styleUrls: ['./bottle-details.component.css']
 })
 export class BottleDetailsComponent implements OnInit {
-  BottleService: BottleService = new BottleService();
-  bottle = this.BottleService.getBottles();
+  bottle : Winebottle[] = [];
   selectedBottle: Winebottle | undefined;
   ngOnInit(): void {
-    const routeParams = this.route.snapshot.paramMap; 
+    this.bottle = this.bottleService.getBottles();
+    const routeParams = this.route.snapshot.paramMap;
     const bottleIdFromRoute = Number(routeParams.get('WinebottleId'));
     this.selectedBottle = this.bottle.find(bottle => bottle.id === bottleIdFromRoute);
   }
-
-  
-
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private bottleService: BottleService) {
    }
 }
+
+
+

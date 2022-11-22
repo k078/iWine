@@ -15,14 +15,11 @@
                 <div class="input-group">
                     <select class="form-select">
                         <option selected>Kelder</option>
-                        <div *ngFor="let cellar of cellars">
-                                <option>{{cellar}}</option>
-                        </div>
+                                <option *ngFor="let cellar of cellars">{{cellar.address}}</option>
                     </select>
                     <button class="btn btn-outline-secondary" type="button">Voeg toe</button>
                 </div>
             </div>
         </div>
-
     </div>
 </div>

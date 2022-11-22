@@ -9,15 +9,15 @@ import { UserService } from 'src/app/components/user/user.service';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-  UserService: UserService = new UserService();
-  User = this.UserService.getUsers();
+  User : User[] = [];
   selectedUser: User | undefined;
   ngOnInit(): void {
+    this.User = this.userService.getUsers();
     const routeParams = this.route.snapshot.paramMap;
     const UserIdFromRoute = Number(routeParams.get('UserId'));
     this.selectedUser = this.User.find(User => User.id === UserIdFromRoute);
   }
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private userService: UserService) {
    }
 }

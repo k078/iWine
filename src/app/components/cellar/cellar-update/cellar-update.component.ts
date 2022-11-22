@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Cellar } from 'src/app/components/cellar/Cellar';
-import { Winebottle } from 'src/app/components/bottle/Winebottle';
+import { Winebottle } from '../../bottle/Winebottle';
+import { Cellar } from '../Cellar';
 import { CellarService } from '../cellar.service';
 
 @Component({
-  selector: 'app-cellar-details',
-  templateUrl: './cellar-details.component.html',
-  styleUrls: ['./cellar-details.component.css']
+  selector: 'app-cellar-update',
+  templateUrl: './cellar-update.component.html',
+  styleUrls: ['./cellar-update.component.css']
 })
-export class CellarDetailsComponent implements OnInit {
+export class CellarUpdateComponent implements OnInit {
   Cellar: Cellar[] = [];
   listBottles: Winebottle[] | undefined;
   selectedCellar: Cellar | undefined;
