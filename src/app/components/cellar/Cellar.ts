@@ -15,7 +15,7 @@ export class Cellar{
         this.address = address;
         this.owner = owner;
         this.area = area;
-        this.wineBottleList = [this.bottleService.getBottleById(1)];
+        this.wineBottleList = [];
         this.worth = 0;
     }
 }

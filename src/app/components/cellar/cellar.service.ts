@@ -37,11 +37,11 @@ export class CellarService {
         cellar.wineBottleList.push(wineBottle);
         cellar.worth += wineBottle.price;
     }
-    removeWineBottle(wineBottle:Winebottle, cellar:Cellar){
-        cellar.wineBottleList.splice(cellar.wineBottleList.indexOf(wineBottle), 1);
-        cellar.worth -= wineBottle.price;
+    removeWineBottle(wineBottle:Winebottle, cellar:Cellar): void{
+      cellar.worth -= wineBottle.price;
+      cellar.wineBottleList.splice(cellar.wineBottleList.indexOf(wineBottle), 1);
     }
-    getWaarde(cellar:Cellar): number{
+    getWorth(cellar:Cellar): number{
         return cellar.worth;
     }
     getBottles(cellar:Cellar): Winebottle[]{

@@ -1,6 +1,5 @@
 import { Cellar } from "../cellar/Cellar";
 import { Winery } from "../winery/Winery";
-
 export class Winebottle {
     id: number;
     winetype: WineType;

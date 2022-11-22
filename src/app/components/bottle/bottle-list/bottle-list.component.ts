@@ -18,5 +18,8 @@ export class BottleListComponent implements OnInit {
     this.cellars = this.cellarService.getCellars();
     this.bottles = this.bottleService.getBottles();
   }
+  addWineBottle(bottle:Winebottle, cellar:Cellar) {
+    this.cellarService.addWineBottle(bottle, cellar);
+  }
 
 }

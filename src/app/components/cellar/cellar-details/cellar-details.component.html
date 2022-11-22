@@ -1,29 +1,44 @@
 <h1 [title]="selectedCellar?.id"></h1>
 <div class="container" *ngIf="selectedCellar">
-    <div class="Cellar-list">
-        <h3><a [title]="selectedCellar.owner.username">
-            Eigenaar: {{ selectedCellar.owner.username }}
-          </a></h3>
-    </div>
-    <div class="Cellar-list">
-        <h3><a [title]="selectedCellar.address">
-            Adres: {{ selectedCellar.address }}
-          </a></h3>
-    </div>
-    <div class="Cellar-list">
-        <h3><a [title]="selectedCellar.area">
-            Oppervlakte: {{ selectedCellar.area }} m2
-          </a></h3>
-    </div>
-    <div class="Cellar-list" *ngFor="let Bottle of listBottles">
-        <h3>
-            <a [title]="Bottle.name + ' details'" [routerLink]="['/bottle', Bottle.id]">
-                <img src="{{ Bottle.img }}" alt="Wijnfles" width="200" height="200">
-            </a>
-        </h3>
-        <p><a [title]="Bottle.name">
-            {{ Bottle.name }}
-          </a></p>
-    </div>
-</div>
+  <div class="Cellar-list">
+    <h3><a [title]="selectedCellar.owner.username">
+        Eigenaar: {{ selectedCellar.owner.username }}
+      </a></h3>
+  </div>
+  <div class="Cellar-list">
+    <h3><a [title]="selectedCellar.address">
+        Adres: {{ selectedCellar.address }}
+      </a></h3>
+  </div>
+  <div class="Cellar-list">
+    <h3><a [title]="selectedCellar.area">
+        Oppervlakte: {{ selectedCellar.area }} m2
+      </a></h3>
+  </div>
+  <div class="Cellar-list">
+    <h3><a [title]="selectedCellar.worth">
+        Totaalwaarde: € {{ getWorth(selectedCellar).toFixed(2) }}
+      </a></h3>
+  </div>
+  <div class="grid">
 
+    <div class="card" *ngFor="let Winebottle of listBottles">
+      <h3>
+        <a [title]="Winebottle.name + ' details'" [routerLink]="['/bottle', Winebottle.id]">
+          <img src="{{ Winebottle.img }}" alt="Wijnfles" width="200" height="200">
+        </a>
+      </h3>
+      <div class="elemtext">
+        <h2>{{ Winebottle.name }}</h2>
+        <p>{{ Winebottle.year}}</p>
+        <p>{{ Winebottle.price}}</p>
+        <a [title]="Winebottle.name + ' details'" [routerLink]="['/bottle', Winebottle.id]"><span class="material-icons">
+          info
+        </span></a>
+        <a (click)="removeWineBottle( Winebottle, selectedCellar )" title="Remove bottle"><span class="material-icons">
+            delete
+          </span></a>
+      </div>
+    </div>
+  </div>
+</div>

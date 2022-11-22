@@ -1,0 +1,37 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  text-align: left;
+  align-content: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  grid-gap: 10px;
+  background-color: #ffefef;
+}
+.card{
+width: auto;
+border: solid 1px black;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+align-items: center;
+background-color: #f7f7f7;
+padding: 10px;
+}
+.elemtext{
+padding:0px;
+margin: 0px;
+}
+p{
+font-size:18px;
+font-weight: bold;
+text-align: left;
+}
+a{
+text-decoration: none;
+color:grey
+}
+.material-icons{
+  font-size: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+}

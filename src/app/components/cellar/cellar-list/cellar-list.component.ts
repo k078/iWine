@@ -18,8 +18,5 @@ export class CellarListComponent implements OnInit {
   removeCellar(cellar:Cellar) {
     this.cellarService.removeCellar(cellar);
   }
-  updateCellar(cellar:Cellar) {
-    this.cellarService.updateCellar(cellar);
-  }
 
 }

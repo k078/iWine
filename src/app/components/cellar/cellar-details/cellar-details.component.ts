@@ -20,6 +20,15 @@ export class CellarDetailsComponent implements OnInit {
     this.selectedCellar = this.Cellar.find(Cellar => Cellar.id === CellarIdFromRoute);
     this.listBottles = this.selectedCellar?.wineBottleList;
   }
-  constructor(private route: ActivatedRoute, private cellarService: CellarService) {
-   }
+  constructor(private route: ActivatedRoute, private cellarService: CellarService) {}
+  removeWineBottle(bottle:Winebottle, cellar:Cellar) {
+    this.cellarService.removeWineBottle(bottle, cellar);
   }
+  getWorth(cellar:Cellar): number {
+    var cellarworth = this.cellarService.getWorth(cellar);
+    if(cellarworth < 0) {
+      cellarworth = 0;
+    }
+    return cellarworth;
+  }
+}

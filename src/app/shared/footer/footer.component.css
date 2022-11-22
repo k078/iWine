@@ -1,0 +1,11 @@
+.nav-link{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: center;
+}
+a{
+  text-decoration: none;
+  color:grey;
+  width: auto;
+}

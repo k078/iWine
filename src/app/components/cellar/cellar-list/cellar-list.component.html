@@ -10,6 +10,7 @@
       <div class="elemtext">
         <h2>Kelder {{ Cellar.id }}</h2>
         <p>Eigenaar: {{Cellar.owner.username}}</p>
+        <p>Adres: {{Cellar.address}}</p>
         <a [title]="Cellar.id + ' details'" [routerLink]="['/cellar', Cellar.id]"><span class="material-icons">
             info
           </span></a>
