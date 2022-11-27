@@ -47,4 +47,16 @@ export class CellarService {
     getBottles(cellar:Cellar): Winebottle[]{
         return cellar.wineBottleList;
     }
+    getCellarAddress(cellar:Cellar): string{
+        return cellar.address;
+    }
+    setCellarAddress(cellar:Cellar, address:string): void{
+        cellar.address = address;
+    }
+    getCellarArea(cellar:Cellar): number{
+        return cellar.area;
+    }
+    setCellarArea(cellar:Cellar, area:number): void{
+        cellar.area = area;
+    }
 }

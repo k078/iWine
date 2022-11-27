@@ -14,6 +14,7 @@ import { AboutComponent } from './components/about/about.component';
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user/user-details/user-details.component';
 import { CellarUpdateComponent } from './components/cellar/cellar-update/cellar-update.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { CellarUpdateComponent } from './components/cellar/cellar-update/cellar-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,12 +25,16 @@ export class UserService {
         this.users.splice(this.users.indexOf(user),1);
     }
     addCellar(cellar:Cellar, user:User): void{
-        user.cellarList.push(cellar);
+      if(cellar.worth!=null){
+      user.cellarList.push(cellar);
         user.totalWorth += cellar.worth;
+      }
     }
     removeCellar(cellar:Cellar, user:User): void{
-        user.cellarList.splice(user.cellarList.indexOf(cellar),1);
+      if(cellar.worth!=null){
+      user.cellarList.splice(user.cellarList.indexOf(cellar),1);
         user.totalWorth -= cellar.worth;
+      }
     }
     getCellars(user:User): Cellar[]{
         return user.cellarList;
