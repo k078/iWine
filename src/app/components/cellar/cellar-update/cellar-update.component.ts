@@ -10,8 +10,6 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./cellar-update.component.css'],
 })
 export class CellarUpdateComponent implements OnInit {
-  componentId: string | null | undefined;
-  componentExists: boolean = false;
   cellar: Cellar | undefined;
   cellarControl = new FormControl('');
   Cellars: Cellar[] = [];
@@ -24,18 +22,9 @@ export class CellarUpdateComponent implements OnInit {
     this.selectedCellar = this.Cellars.find(
       (Cellar) => Cellar.id === CellarIdFromRoute
     );
-    this.route.paramMap.subscribe((params) => {
-      this.componentId = params.get('id');
-      if (this.componentId) {
-        // Bestaande cellar
-        console.log('Bestaande component');
-        this.componentExists = true;
-        // Haal de bestaande cellar uit het array.
-        // We maken hier een kopie van het oorspronkelijk object!
-        this.cellar = {
-          ...this.cellarService.getCellarById(Number(this.componentId)),
-        };
-      }
+    this.cellarForm = new FormGroup({
+      address: new FormControl(this.selectedCellar?.address),
+      area : new FormControl(this.selectedCellar?.area),
     });
   }
   constructor(
@@ -43,13 +32,13 @@ export class CellarUpdateComponent implements OnInit {
     private cellarService: CellarService,
     private router: Router
   ) {}
-  onSubmit(adress: string, area: number) {
+  onSubmit() {
     if (this.selectedCellar != null) {
       console.log('Submitting the form');
       // Update bestaande entry in arraylist
-      this.cellarService.setCellarArea(this.selectedCellar, area);
-      this.cellarService.setCellarAddress(this.selectedCellar, adress);
-      this.router.navigate(['..']);
+      this.cellarService.setCellarArea(this.selectedCellar, this.selectedCellar.area);
+      this.cellarService.setCellarAddress(this.selectedCellar, this.selectedCellar.address);
+      this.router.navigate(['../cellar']);
     }
   }
 }

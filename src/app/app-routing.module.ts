@@ -8,6 +8,7 @@ import { CellarDetailsComponent } from './components/cellar/cellar-details/cella
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user/user-details/user-details.component';
 import { CellarUpdateComponent } from './components/cellar/cellar-update/cellar-update.component';
+import { CellarAddComponent } from './components/cellar/cellar-add/cellar-add.component';
 
 const routes: Routes = [
   { path: 'bottle', component: BottleListComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'cellar', component: CellarListComponent },
   { path: 'cellar/:CellarId', component: CellarDetailsComponent },
   { path: 'cellar/update/:CellarId', component: CellarUpdateComponent },
+  { path: 'cellar/add/form', component: CellarAddComponent },
   { path: 'users', component: UserListComponent },
   { path: 'users/:UserId', component: UserDetailsComponent },
   { path: 'about', component: AboutComponent },

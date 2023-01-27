@@ -23,8 +23,8 @@ export class CellarService {
         return this.cellars.filter((cellar) => cellar.id === id)[0];
     }
 
-    addCellar(cellar: Cellar): void {
-        this.cellars.push(cellar);
+    addCellar(address:string, area:number): void {
+        this.cellars.push(new Cellar(this.cellars.length + 1, address, this.userService.getUserById(1), area));
     }
 
     removeCellar(cellar: Cellar): void {

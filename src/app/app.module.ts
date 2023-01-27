@@ -15,6 +15,7 @@ import { UserListComponent } from './components/user/user-list/user-list.compone
 import { UserDetailsComponent } from './components/user/user-details/user-details.component';
 import { CellarUpdateComponent } from './components/cellar/cellar-update/cellar-update.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CellarAddComponent } from './components/cellar/cellar-add/cellar-add.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserListComponent,
     UserDetailsComponent,
     CellarUpdateComponent,
+    CellarAddComponent,
   ],
   imports: [
     BrowserModule,
